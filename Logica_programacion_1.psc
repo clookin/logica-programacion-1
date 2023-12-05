@@ -10,10 +10,9 @@ Algoritmo Logica_programacion_1
 		Escribir "Dame el tercer numero"
 		Leer num3
 		Escribir nombre " estos son los resultados:"
-		si num1 = num2 y num1 = num3 Entonces
-			Escribir "Todos los numeros son iguales"
-		SiNo
-			
+	si num1 = num2 y num1 = num3 Entonces
+		Escribir "Todos los numeros son iguales"
+	SiNo
 		si num1 < num2 Entonces
 			si num2 < num3 Entonces
 				escribir "El numero " num3 " es el mayor entre los tres"
@@ -37,40 +36,46 @@ Algoritmo Logica_programacion_1
 						Escribir "El numero " num3 " es el numero de la mitad"
 						Escribir "El numero " num1 " es el numero mas pequeño"
 					SiNo
-						Escribir "El numero " num1 " es el numero de la mitad"
-						Escribir "El numero " num3 " es el numero mas pequeño"
+						si num3 = num1 entonces
+							Escribir "El primer numero es igual al tercero = " num1
+						SiNo
+							Escribir "El numero " num1 " es el numero de la mitad"
+							Escribir "El numero " num3 " es el numero mas pequeño"
+						FinSi
 					FinSi
 				FinSi
-				
-					
 			FinSi
 		SiNo 
 			si num1 = num3 entonces
 				Escribir "El primer numero es igual al tercero = " num1
 				Escribir "El numero " num2 " es el mas pequeño"
 			SiNo
-				
-			
-			si num1 = num2
-				Escribir "El primer numero es igual al segundo = " num1
-				Escribir "El numero " num3 " es el mas pequeño"
-			sino
-			si num1 > num3 Entonces
-				Escribir "El numero " num1 " es el mayor entre los tres"
-				si num2 < num3 Entonces
-					Escribir "El numero " num3 " es el numero de la mitad"
-					Escribir "El numero " num2 " es el numero mas pequeño"
-				SiNo
-					Escribir "El numero " num2 " es el numero de la mitad"
-					Escribir "El numero " num3 " es el numero mas pequeño"
-					
+				si num1 = num2
+					Escribir "El primer numero es igual al segundo = " num1
+					si num3 > num1 Entonces
+						Escribir "El numero " num3 " es el mas grande"
+					SiNo
+						Escribir "El numero " num3 " es el mas pequeño"
+					FinSi
+				sino
+					si num1 > num3 Entonces
+						Escribir "El numero " num1 " es el mayor entre los tres"
+						si num2 < num3 Entonces
+						Escribir "El numero " num3 " es el numero de la mitad"
+						Escribir "El numero " num2 " es el numero mas pequeño"
+					SiNo
+							si num2 = num3 Entonces
+								Escribir "El segundo numero es igual al tercero = " num2
+							SiNo
+								Escribir "El numero " num2 " es el numero de la mitad"
+								Escribir "El numero " num3 " es el numero mas pequeño"
+							FinSi
+						FinSi
+					FinSi
 				FinSi
 			FinSi
 		FinSi
-		
-		FinSi
 	FinSi
-FinSi
 
 		
 		
